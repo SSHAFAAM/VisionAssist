@@ -14,7 +14,7 @@ function speak(text) {
     const speech = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(speech);
-}
+}   
 
 function startNavigation() {
     speak("Where do you want to go?");
@@ -90,7 +90,6 @@ function confirmPlace(place) {
         }
     };
 }
-
 function openMaps(place) {
     speak("Opening navigation to " + place);
 
@@ -98,12 +97,15 @@ function openMaps(place) {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
 
-        const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${encodeURIComponent(place)}&travelmode=walking`;
+        // 🔥 KEY FIX
+        const enhancedPlace = place + " near me";
+
+        const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lon}&destination=${encodeURIComponent(enhancedPlace)}&travelmode=walking`;
 
         window.location.href = url;
     }, () => {
-        // fallback if location denied
-        const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place)}&travelmode=walking`;
+        // fallback
+        const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(place + ", India")}&travelmode=walking`;
         window.location.href = url;
     });
 }
