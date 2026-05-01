@@ -55,12 +55,53 @@ function speak(text) {
 
 function getColor(label) {
     const colors = {
-        person: "red",
-        bottle: "blue",
-        chair: "green",
-        laptop: "orange"
+        // People & animals
+        person: "#FF3B30",
+        dog: "#FF9500",
+        cat: "#FFCC00",
+        bird: "#34C759",
+
+        // Daily objects
+        bottle: "#007AFF",
+        cup: "#5AC8FA",
+        bowl: "#5856D6",
+        spoon: "#AF52DE",
+        fork: "#FF2D55",
+        knife: "#FF453A",
+
+        // Furniture
+        chair: "#30D158",
+        couch: "#00C7BE",
+        bed: "#64D2FF",
+        dining_table: "#BF5AF2",
+
+        // Electronics
+        tv: "#0A84FF",
+        laptop: "#5E5CE6",
+        mouse: "#AC8E68",
+        keyboard: "#FFD60A",
+        cell_phone: "#FF9F0A",
+
+        // Indoor stuff
+        book: "#8E8E93",
+        clock: "#FF375F",
+        vase: "#32D74B",
+        remote: "#FFD60A",
+
+        // Food
+        banana: "#FFE066",
+        apple: "#FF453A",
+        sandwich: "#D4A373",
+        pizza: "#FF9F0A",
+
+        // Transport
+        car: "#FF2D55",
+        bus: "#FF9500",
+        bicycle: "#32ADE6",
+        motorcycle: "#FF3B30"
     };
-    return colors[label] || "yellow";
+
+    return colors[label] || "#FFFF00"; // fallback
 }
 
 /* ========= START CAMERA ========= */
