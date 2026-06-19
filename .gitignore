@@ -13,8 +13,6 @@ yolov5su.pt
 yolov8n.pt
 yolov8s.pt
 
-# Custom trained model
-models/
 
 # OS files
 .DS_Store
