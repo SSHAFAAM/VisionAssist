@@ -90,4 +90,7 @@ Custom YOLO training was performed on datasets containing:
 This project aims to improve accessibility, independence, and confidence for visually impaired individuals by using AI as an everyday companion.
 
 ## Contributors
-Your Name
+Shafana
+Alisha
+Udaynath
+
