@@ -1,8 +1,21 @@
-models
-requirements.txt
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+modules/__pycache__/
+*.pyc
+
+# Large model files (if not uploading)
 yolo11n.pt
 yolov5su.pt
 yolov8n.pt
 yolov8s.pt
-.venv
-modules/__pycache__
+
+# Custom trained model
+models/
+
+# OS files
+.DS_Store
+Thumbs.db
